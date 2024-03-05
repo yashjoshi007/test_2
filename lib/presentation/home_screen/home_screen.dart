@@ -140,17 +140,27 @@ class HomeScreenState extends State<HomeScreen> {
               },
             ),
             SizedBox(height: 25.v),
-            SizedBox(
-              height: 10.v,
-              child: AnimatedSmoothIndicator(
-                activeIndex: 0,
-                count: 2,
-                effect: ScrollingDotsEffect(
-                  activeDotColor: Color(0X1212121D),
-                  dotHeight: 10.v,
-                ),
+        Container(
+          height: 10.v,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white, // Shadow color
+                spreadRadius: 2.h,
+                blurRadius: 2.h,
+                offset: Offset(0, 0), // Shadow position
               ),
+            ],
+          ),
+          child: AnimatedSmoothIndicator(
+            activeIndex: 0,
+            count: 2,
+            effect: ScrollingDotsEffect(
+              activeDotColor: Color(0xFF5AE0AE),
+              dotHeight: 10.v,
             ),
+          ),
+        )
           ],
         ),
       ),
